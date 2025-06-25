@@ -1,39 +1,41 @@
-// Create a JavaScript program that simulates a traffic light. Use a variable named currentLight to represent the current state of the traffic light. The program should have the following conditions below. Change the value of currentLight and observe the different messages logged to the console. Rewrite using switch-case.
-// If currentLight is "red", log "Stop."
-// If currentLight is "yellow", log "Proceed with caution."
-// If currentLight is "green", log "Go."
-const currentLight = "red";
-switch (currentLight) {
-  case "red":
-    console.log("Stop.");
-    break;
-  case "yellow":
-    console.log("Proceed with caution.");
-    break;
-  case "green":
-    console.log("Go.");
-    break;
-  default:
-    console.log("Invalid traffic light state.");
+// How can unary operators such as increment (++) and decrement (--) be effectively used in loops to manipulate variables within the iteration process?
+
+// Keeps iteration clean and simple, allowing for straightforward variable manipulation without complexity.
+
+// Compare and contrast the usage of the for, for-of, and for-in loops in JavaScript, highlighting their specific applications and scenarios where each loop type is most suitable.
+
+//for: anything with numbers
+//for-of: iterable objects (arrays, strings, etc.)
+//for-in: for object literals (dictionaries)
+
+// Create a for loop to log all even numbers between 1 and 20 (inclusive) to the console. Make use of the increment (++) and modulo (%) operators to identify even numbers.
+
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
 }
 
-// Create a JavaScript program that simulates a login system. Use variables username and password to represent the user's credentials. The program should have the following conditions below. Change the values of username and password to test different login scenarios. Rewrite using ternary.
-// If username is "admin" and password is "secret", log "Login successful. Welcome, Admin!".
-// If username is not "admin" or password is not "secret", log "Login failed. Incorrect credentials.".
-const username = "admin";
-if (username === "admin" && password === "secret") {
-  console.log("Login successful. Welcome, Admin!");
-} else {
-  console.log("Login failed. Incorrect credentials.");
+// Use a for-of loop to iterate over each character in a string and check if it is a vowel (consider both uppercase and lowercase). Log the total count of vowels to the console.
+
+const str = "Hello World!";
+let vowelCount = 0;
+for (const char of str) {
+  if ("aeiouAEIOU".includes(char)) {
+    vowelCount++;
+  }
 }
+console.log(`Total vowels: ${vowelCount}`);
 
-// Create a JavaScript program that checks the role of a user and grants access accordingly. Use a variable named userRole to represent the user's role. The program should have the following conditions below. Change the value of userRole to test different user scenarios. Rewrite using switch-case.
-// If userRole is "admin", log "Full access granted. Welcome, Admin!".
-// If userRole is "user", log "Limited access granted. Welcome, User!".
-// If userRole is neither "admin" nor "user", log "Access denied. Unknown user role."
+// Log all the key-value pairs of an object literal to the console using a for-in loop. Create an object with at least five properties, and use the loop to log each property's key and value.
 
-const userRole = "admin"
-  ? "Full access granted. Welcome, Admin!"
-  : userRole === "user"
-  ? "Limited access granted. Welcome, User!"
-  : "Access denied. Unknown user role.";
+const obj = {
+  name: "Alice",
+  age: 30,
+  occupation: "Engineer",
+  city: "New York",
+  country: "USA",
+};
+for (const key in obj) {
+  console.log(`${key}: ${obj[key]}`);
+}
