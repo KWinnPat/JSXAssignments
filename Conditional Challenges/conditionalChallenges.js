@@ -14,9 +14,6 @@ console.log(largestNum(9, 12));
 
 // Challenge 3
 
-// Create a program that will title case a string (capitalize the first letter of each word).
-// Here is an example of the output: "I am a sentence" => "I Am A Sentence"
-
 function titleCase(str) {
   return str
     .split(" ")
@@ -27,10 +24,6 @@ function titleCase(str) {
 console.log(titleCase("I am a sentence"));
 
 // Challenge 4
-
-// Write a program that takes a string and returns the letters in alphabetical order.
-// Here is an example of the output: "Hi there" => "eeehhhirt"
-// BONUS: Make the output represent the input characters (each character returns capitalized).
 
 function alphabeticalOrder(str) {
   return str.toUpperCase().split("").sort().join("").replace(" ", "");
